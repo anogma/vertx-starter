@@ -11,6 +11,7 @@ public class MainVerticle extends AbstractVerticle {
       req.response()
         .putHeader("content-type", "text/plain")
         .end("Hello from Vert.x!");
+      System.out.println("Hello! This is a request. Where is the response?");
     }).listen(8888, http -> {
       if (http.succeeded()) {
         startPromise.complete();
